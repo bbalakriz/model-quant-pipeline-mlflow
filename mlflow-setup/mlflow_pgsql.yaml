@@ -1,0 +1,79 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  creationTimestamp: "2025-07-17T18:12:10Z"
+  generation: 1
+  labels:
+    operators.coreos.com/postgresql.mlflow: ""
+  name: postgresql
+  namespace: mlflow
+  resourceVersion: "4744985"
+  uid: d99f2df8-0a27-41cf-837a-e9a003b3d25a
+spec:
+  channel: v5
+  installPlanApproval: Automatic
+  name: postgresql
+  source: community-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: postgresoperator.v5.8.2
+status:
+  catalogHealth:
+  - catalogSourceRef:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: CatalogSource
+      name: certified-operators
+      namespace: openshift-marketplace
+      resourceVersion: "4739601"
+      uid: c44f2c45-fff6-4396-92cb-5102d8aaa00f
+    healthy: true
+    lastUpdated: "2025-07-17T18:12:14Z"
+  - catalogSourceRef:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: CatalogSource
+      name: community-operators
+      namespace: openshift-marketplace
+      resourceVersion: "4741207"
+      uid: 34249dca-5caa-4119-b683-cfb7c2f1d891
+    healthy: true
+    lastUpdated: "2025-07-17T18:12:14Z"
+  - catalogSourceRef:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: CatalogSource
+      name: redhat-marketplace
+      namespace: openshift-marketplace
+      resourceVersion: "4738117"
+      uid: 9af65b5d-4d74-413b-acd4-5c668c06c66e
+    healthy: true
+    lastUpdated: "2025-07-17T18:12:14Z"
+  - catalogSourceRef:
+      apiVersion: operators.coreos.com/v1alpha1
+      kind: CatalogSource
+      name: redhat-operators
+      namespace: openshift-marketplace
+      resourceVersion: "4731567"
+      uid: f0fffbcc-0c74-42c9-bb12-18e542d96fb6
+    healthy: true
+    lastUpdated: "2025-07-17T18:12:14Z"
+  conditions:
+  - lastTransitionTime: "2025-07-17T18:12:16Z"
+    message: all available catalogsources are healthy
+    reason: AllCatalogSourcesHealthy
+    status: "False"
+    type: CatalogSourcesUnhealthy
+  currentCSV: postgresoperator.v5.8.2
+  installPlanGeneration: 1
+  installPlanRef:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: InstallPlan
+    name: install-v6xqw
+    namespace: mlflow
+    resourceVersion: "4744633"
+    uid: 99408c65-5212-4248-b580-bcccb5b50a4f
+  installedCSV: postgresoperator.v5.8.2
+  installplan:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: InstallPlan
+    name: install-v6xqw
+    uuid: 99408c65-5212-4248-b580-bcccb5b50a4f
+  lastUpdated: "2025-07-17T18:12:32Z"
+  state: AtLatestKnown
