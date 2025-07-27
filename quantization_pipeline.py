@@ -55,7 +55,6 @@ def quantize_model(
     # 2) Data calibration
     from datasets import load_dataset
 
-    # Exercise left for the attendance:
     # This is harcoded but it could be parametrized in the pipeline
     NUM_CALIBRATION_SAMPLES = 256  # 1024
     DATASET_ID = "neuralmagic/LLM_compression_calibration"
@@ -86,7 +85,6 @@ def quantize_model(
     from llmcompressor.modifiers.smoothquant import SmoothQuantModifier
     from llmcompressor.modifiers.quantization import QuantizationModifier
 
-    # Exercise left for the attendance:
     # This is harcoded but it could be parametrized in the pipeline
     DAMPENING_FRAC = 0.1  # 0.01
     OBSERVER = "mse"  # minmax
