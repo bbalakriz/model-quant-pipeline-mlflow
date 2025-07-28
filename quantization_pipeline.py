@@ -209,7 +209,7 @@ def evaluate_model(
     lm_eval --model vllm \
       --model_args pretrained=$MODEL_PATH,add_bos_token=true \
       --trust_remote_code \
-      --tasks gsm8k \
+      --tasks eval_tasks \
       --num_fewshot 5 \
       --limit 250 \
       --batch_size 'auto'
@@ -229,7 +229,7 @@ def evaluate_model(
                              "--trust_remote_code",
                              "--tasks", eval_tasks,
                              "--num_fewshot", "5",
-                             "--limit", "50",
+                             "--limit", "250",
                              "--batch_size", "auto",
                              "--output_path", results_json],
                             capture_output=True, text=True, env=env)
